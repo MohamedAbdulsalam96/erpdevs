@@ -1,0 +1,55 @@
+{
+ "creation": "2020-02-01 10:00:34.378947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "objective_type",
+  "objective",
+  "column_break_3",
+  "objective_definition",
+  "days"
+ ],
+ "fields": [
+  {
+   "fieldname": "objective_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Objective Type",
+   "options": "\nPrimary\nSecondary\nTeam Building & Staff Development\nOperational Review\nTechnical Competency\nAddress Major Problems- Changes- improvements\nStrategic and planning issues\nProject Management- Organizational Planning and execution\nThinking Skills-Decision making and conflict resolution\nPersonality & interpersonal skill"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Objective"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "objective_definition",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Objective Definition "
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Days"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-02-01 10:07:58.937260",
+ "modified_by": "Administrator",
+ "module": "Erpdevs",
+ "name": "Performance Profile",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

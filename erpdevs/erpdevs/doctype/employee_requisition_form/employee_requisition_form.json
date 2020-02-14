@@ -1,0 +1,205 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-02-01 08:58:43.546115",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "erf_initiation_date",
+  "column_break_2",
+  "erf_code",
+  "naming_series",
+  "section_break_4",
+  "designation",
+  "designation_code",
+  "department",
+  "project",
+  "company",
+  "column_break_8",
+  "suggested_source_of_hire",
+  "reason_for_request",
+  "expected_date_of_deployment",
+  "gender",
+  "male",
+  "no_of_employees",
+  "no_of_male_employees",
+  "height_by_male",
+  "column_break_21",
+  "female",
+  "no_of_female_employees",
+  "height_by_female",
+  "total_employees",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "erf_initiation_date",
+   "fieldtype": "Date",
+   "label": "ERF Initiation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "erf_code",
+   "fieldtype": "Data",
+   "label": "ERF Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "suggested_source_of_hire",
+   "fieldtype": "Select",
+   "label": "Suggested Source of Hire",
+   "options": "Local\nOverseas\nAny"
+  },
+  {
+   "fieldname": "reason_for_request",
+   "fieldtype": "Select",
+   "label": "Reason for Request",
+   "options": "Attrition\nEmployee Transfer\nNew Business Requirement\nAdditional Business in Current Project\nExcess for Backup"
+  },
+  {
+   "fieldname": "expected_date_of_deployment",
+   "fieldtype": "Date",
+   "label": "Expected Date of Deployment"
+  },
+  {
+   "fieldname": "no_of_male_employees",
+   "fieldtype": "Data",
+   "label": "No of Male Employees"
+  },
+  {
+   "fieldname": "no_of_female_employees",
+   "fieldtype": "Data",
+   "label": "No of Female Employees"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Section Break",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "height_by_male",
+   "fieldtype": "Data",
+   "label": "Height By Gender(Male)"
+  },
+  {
+   "fieldname": "height_by_female",
+   "fieldtype": "Data",
+   "label": "Height By Gender(Female)"
+  },
+  {
+   "fetch_from": "project.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Company"
+  },
+  {
+   "default": "0",
+   "fieldname": "male",
+   "fieldtype": "Check",
+   "label": "Male"
+  },
+  {
+   "default": "0",
+   "fieldname": "female",
+   "fieldtype": "Check",
+   "label": "Female"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "designation.designation_abbreviation",
+   "fieldname": "designation_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Designation Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Requisition Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "ERF-2020-"
+  },
+  {
+   "depends_on": "eval:doc.male==0 && doc.female==0",
+   "fieldname": "no_of_employees",
+   "fieldtype": "Data",
+   "label": "No of Employees"
+  },
+  {
+   "fieldname": "total_employees",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Total Employees",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-02-01 11:29:25.998208",
+ "modified_by": "Administrator",
+ "module": "Erpdevs",
+ "name": "Employee Requisition Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "erf_code",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

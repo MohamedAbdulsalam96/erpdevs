@@ -1,0 +1,196 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-02-01 09:19:24.899955",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "erf_reference",
+  "shift_working",
+  "night_shift",
+  "column_break_2",
+  "shift_hours",
+  "work_days",
+  "section_break_6",
+  "will_require_to_travel",
+  "percentage_of_required_time",
+  "column_break_9",
+  "off_days_in_a_month",
+  "section_break_11",
+  "primary_place_of_work",
+  "drivers_licence_required",
+  "column_break_13",
+  "education_qualification",
+  "specialization",
+  "section_break_18",
+  "basic_key_skills",
+  "amended_from",
+  "section_break_20",
+  "position_summary",
+  "section_break_22",
+  "performance_profile",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "shift_working",
+   "fieldtype": "Select",
+   "label": "Shift Working",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "night_shift",
+   "fieldtype": "Select",
+   "label": "Night Shift",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "shift_hours",
+   "fieldtype": "Data",
+   "label": "Shift Hours"
+  },
+  {
+   "fieldname": "work_days",
+   "fieldtype": "Data",
+   "label": "Work Days"
+  },
+  {
+   "fieldname": "off_days_in_a_month",
+   "fieldtype": "Data",
+   "label": "Off Days In A Month"
+  },
+  {
+   "fieldname": "will_require_to_travel",
+   "fieldtype": "Select",
+   "label": "Will Require To Travel",
+   "options": "\nNot Required to travel\nYes- Local (50% of the time)\nYes- Overseas (40 % of the time)\nYes Local & Overseas(20% of the time)\nMention % of required time for travel"
+  },
+  {
+   "depends_on": "eval:doc.will_require_to_travel=='Mention % of required time for travel'",
+   "fieldname": "percentage_of_required_time",
+   "fieldtype": "Percent",
+   "label": "Percentage of Required time"
+  },
+  {
+   "fieldname": "primary_place_of_work",
+   "fieldtype": "Data",
+   "label": "Primary Place Of Work"
+  },
+  {
+   "fieldname": "drivers_licence_required",
+   "fieldtype": "Select",
+   "label": "Drivers Licence Required",
+   "options": "\nNot Required\nYes Must have Light License\nYes Must have heavy License\nYes Must have a Motor Biker License"
+  },
+  {
+   "fieldname": "education_qualification",
+   "fieldtype": "Select",
+   "label": "Education Qualification",
+   "options": "\nQualification Doesn't Define You\nNA\nHigher Secondary or Similar\nDiploma or Similar\nGraduate\nMasters\nDoctorate"
+  },
+  {
+   "depends_on": "eval:doc.education_qualification=='Diploma or Similar' ||\ndoc.education_qualification=='Graduate'||\ndoc.education_qualification=='Masters'||\ndoc.education_qualification=='Doctorate'",
+   "fieldname": "specialization",
+   "fieldtype": "Data",
+   "label": "Specialization"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ERF Operational Requirements",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "basic_key_skills",
+   "fieldtype": "Table",
+   "label": "Basic Key Skills",
+   "options": "Basic Key Skills"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Basic Key Skills"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "position_summary",
+   "fieldtype": "Small Text",
+   "label": "Position Summary  "
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Performance Profile"
+  },
+  {
+   "fieldname": "performance_profile",
+   "fieldtype": "Table",
+   "label": "Performance Profile",
+   "options": "Performance Profile"
+  },
+  {
+   "fieldname": "erf_reference",
+   "fieldtype": "Link",
+   "label": "ERF Reference",
+   "options": "Employee Requisition Form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "EOR-2020-"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-02-01 13:54:46.574217",
+ "modified_by": "Administrator",
+ "module": "Erpdevs",
+ "name": "ERF Operational Requirements",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

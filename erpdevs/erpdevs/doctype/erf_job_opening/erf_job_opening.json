@@ -1,0 +1,208 @@
+{
+ "autoname": "field:route",
+ "creation": "2020-02-01 11:19:35.245167",
+ "description": "Description of a Job Opening",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "erf_number",
+  "column_break_2",
+  "job_posted_on",
+  "job_post_valid_till",
+  "section_break_5",
+  "designation",
+  "column_break_5",
+  "department",
+  "gender",
+  "no_of_employees",
+  "no_of_male_employees",
+  "height_by_male",
+  "column_break_14",
+  "no_of_female_employees",
+  "height_by_female",
+  "section_break_10",
+  "basic_key_skills",
+  "section_break_6",
+  "publish",
+  "route",
+  "company",
+  "position_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "erf_number",
+   "fieldtype": "Link",
+   "label": "ERF Number",
+   "options": "Employee Requisition Form"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "job_posted_on",
+   "fieldtype": "Date",
+   "label": "Job Posted On",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "erf_number.expected_date_of_deployment",
+   "fieldname": "job_post_valid_till",
+   "fieldtype": "Date",
+   "label": "Job Post Valid Till",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "erf_number.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "erf_number.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "erf_number.gender",
+   "fieldname": "gender",
+   "fieldtype": "Section Break",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "  "
+  },
+  {
+   "default": "0",
+   "fieldname": "publish",
+   "fieldtype": "Check",
+   "label": "Publish on website"
+  },
+  {
+   "depends_on": "publish",
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "unique": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "basic_key_skills",
+   "fieldtype": "Table",
+   "label": "Basic Key Skills",
+   "options": "Basic Key Skills"
+  },
+  {
+   "fetch_from": "erf_number.no_of_employees",
+   "fieldname": "no_of_employees",
+   "fieldtype": "Data",
+   "label": "No of Employees",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "erf_number.no_of_male_employees",
+   "fieldname": "no_of_male_employees",
+   "fieldtype": "Data",
+   "label": "No of Male Employees",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "erf_number.height_by_male",
+   "fieldname": "height_by_male",
+   "fieldtype": "Data",
+   "label": "Height By Gender(Male)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "erf_number.no_of_female_employees",
+   "fieldname": "no_of_female_employees",
+   "fieldtype": "Data",
+   "label": "No of Female Employees",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "erf_number.height_by_female",
+   "fieldname": "height_by_female",
+   "fieldtype": "Data",
+   "label": "Height By Gender(Female)",
+   "read_only": 1
+  },
+  {
+   "description": "Job profile, qualifications required etc.",
+   "fieldname": "position_summary",
+   "fieldtype": "Small Text",
+   "label": "Position Summary",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-bookmark",
+ "modified": "2020-02-01 14:26:44.526611",
+ "modified_by": "Administrator",
+ "module": "Erpdevs",
+ "name": "ERF Job Opening",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guest"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}

@@ -1,0 +1,142 @@
+{
+ "creation": "2020-02-01 10:18:06.247858",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "salary_breakdown",
+  "amended_from",
+  "section_break_4",
+  "closing_date_of_job_posting",
+  "column_break_6",
+  "erf_finalization_on",
+  "section_break_8",
+  "pam_file_name",
+  "column_break_10",
+  "pam_designation",
+  "section_break_10",
+  "required_quantity",
+  "column_break_12",
+  "available_quantity",
+  "column_break_14",
+  "final_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Salary Breakdown"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ERF Finalization",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary_breakdown",
+   "fieldtype": "Table",
+   "label": "Salary Breakdown",
+   "options": "Salary Breakdown"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "closing_date_of_job_posting",
+   "fieldtype": "Date",
+   "label": "Closing Date of Job Posting"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "erf_finalization_on",
+   "fieldtype": "Date",
+   "label": "ERF Finalization On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "docstatus",
+   "fieldname": "pam_file_name",
+   "fieldtype": "Link",
+   "label": "PAM File Name",
+   "options": "PAM File"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "docstatus",
+   "fieldname": "required_quantity",
+   "fieldtype": "Data",
+   "label": "Required Quantity "
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "docstatus",
+   "fieldname": "available_quantity",
+   "fieldtype": "Data",
+   "label": "Available Quantity"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "docstatus",
+   "fieldname": "final_quantity",
+   "fieldtype": "Data",
+   "label": "Final Quantity"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "docstatus",
+   "fieldname": "pam_designation",
+   "fieldtype": "Link",
+   "label": "PAM Designation",
+   "options": "PAM Designation List"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-02-01 10:37:56.749187",
+ "modified_by": "Administrator",
+ "module": "Erpdevs",
+ "name": "ERF Finalization",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
